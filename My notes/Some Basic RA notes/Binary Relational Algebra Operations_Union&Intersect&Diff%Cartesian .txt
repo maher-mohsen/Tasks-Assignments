@@ -1,0 +1,53 @@
+Union (U): Is a relation that includes all tuples that is exist in two relations or one of them without duplication 
+		(may duplication EXIST if we use 'UNION ALL' )two relations must have same no of columns..must each column in two relations have same domain 
+
+
+	ex 1 :
+		SELECT column_name(s) FROM table1
+		UNION
+		SELECT column_name(s) FROM table2;
+	
+
+	ex 2 (Duplication Exist):
+		SELECT column_name(s) FROM table1
+		UNION ALL
+		SELECT column_name(s) FROM table2;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Intersection (n) : Is a relation that includes all tuples that is exit in two relations 
+
+	
+		ex 1 :
+			SELECT supplier_id
+         		FROM suppliers
+			INTERSECT
+			SELECT supplier_id
+			FROM orders;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Difference (-) : Is relation that includes all tuples that is exist in first relation and does not exist in second relation
+
+	
+		ex 1 (Table 1- Table 2) : 
+						(SELECT * FROM table1 EXCEPT SELECT * FROM table2)  
+						UNION ALL		
+
+		ex 2 (Table 2- Table 1) : 
+						(SELECT * FROM table2 EXCEPT SELECT * FROM table1)  
+						UNION ALL
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Cartesian Product (Cross Join) (x) : Is a Binary operation which take every row in relation one and merge it with every row in relation 2
+				The resault is a relation contains (no of rows in first relation x no of rows in second relation) Rows
+					and (no of coulmns in first relation + no of coulmns in second relation) Coulmns
+
+
+
+		ex 1 :
+			SELECT table1.column1, table2.column2...
+			FROM  table1, table2 [, table3 ]		

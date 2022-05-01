@@ -1,0 +1,22 @@
+Join (><) : Is a operation which connect 2 realations depnded on a cond
+
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+
+
+
+
+
+      ex 1 (Basic Join): (Display only mangers with their depart info)
+				Select name,depart_name,Depart_num from employee,depart
+				where eployee.ssn=depart.mgr_ssn;
+	
+			
+  	ex 2 (INNER JOIN): 
+				SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+				FROM Orders
+				INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+			

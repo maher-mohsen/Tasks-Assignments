@@ -1,0 +1,22 @@
+1- Select (Segma): for select tuple or row from relation depended on some condtions
+				(The resault comes out as a relation)....(Horzintal Partitioning) 
+
+		ex 1 (Simple Select):
+			Select * from employee
+				where employee.Dno='4';
+	
+		ex 2 (Simple Select):
+			Select * from employee
+				where employee.salary>30000;
+ 
+		ex 3 (condtions>1,And):
+			Select * from employee
+				where employee.dno='4' AND employee.salary>30000;
+
+     	      ex 4 (condtions>1,Or):
+			Select * from employee
+				where employee.dno='5' OR employee.salary>30000;
+			
+		ex 5 (condtions>1,And,Or):
+			Select * from employee
+				where (employee.dno='4' AND employee.salary>30000) OR (employee.dno='9' AND employee.salary<20000);

@@ -1,0 +1,35 @@
+Project (Pi) : Uniary operator uses to selec a spicefic no of columns (Attributes)..(VERTICAL Partitioning)
+			(Project Operator choose distinct tuple (if there is 2 tuples have same exactly values in all coulmns only one will be choosen))
+
+	ex 1(Simple Project):
+		select ssn,salary,address from empolyee;
+
+	ex 2(Simple Project with Cond):
+		select ssn,salary,address from empolyee
+		where eomplyee.dno='5';
+
+	ex 1 (Simple Project with Cond):
+		Select ssn,salary,address  from employee
+		where employee.Dno='4';
+	
+	ex 2 (Simple Project with Cond):
+		Select ssn,salary,address  from employee
+		where employee.salary>30000;
+ 
+	ex 3 (condtions>1,And):
+		Select ssn,salary,address  from employee
+		where employee.dno='4' AND employee.salary>30000;
+
+     	ex 4 (condtions>1,Or):
+		Select ssn,salary,address  from employee
+		where employee.dno='5' OR employee.salary>30000;
+			
+	ex 5 (condtions>1,And,Or):
+		Select ssn,salary,address  from employee
+		where (employee.dno='4' AND employee.salary>30000) OR (employee.dno='9' AND employee.salary<20000);
+
+
+
+Why should do select before project ?!:
+1- May i choose some tuples i wont use in projecting and that's cost time (More optmize)
+2- May i choose some attributes don't satisfy Select Condtions ( All cond contain Dno and Projecting takes ssn,salary,address)

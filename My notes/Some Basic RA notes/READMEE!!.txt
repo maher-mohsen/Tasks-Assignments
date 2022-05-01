@@ -1,0 +1,1 @@
+All Notes from El desoki Relational ALgebra Lectures
