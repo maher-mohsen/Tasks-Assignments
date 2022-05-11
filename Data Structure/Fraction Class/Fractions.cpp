@@ -54,7 +54,7 @@ Fraction Fraction::operator+(Fraction&frac){
                     fr.nume=nume+frac.nume;
                     }
                     else{
-                        int lc = lcm(frac.deno,deno);
+                        int lc =frac.deno*deno;
                         int x = nume*frac.deno;
                         int y = frac.nume *deno;
                         fr.deno = lc;
@@ -71,7 +71,7 @@ Fraction Fraction::operator-(Fraction& frac){
                     fr.nume=nume-frac.nume;
                     }
                     else{
-                        int lc = lcm(frac.deno,deno);
+                        int lc = frac.deno*deno;
                         int x = nume*frac.deno;
                         int y = frac.nume *deno;
                         fr.deno = lc;
@@ -105,7 +105,7 @@ Fraction Fraction::operator+(const int& x){
                     fr.nume=this->nume;
                     frac.deno=1;
                     frac.nume=x;
-                    int lc = lcm(frac.deno,deno);
+                    int lc = frac.deno*deno;
                         int b = nume*frac.deno;
                         int y = frac.nume *deno;
                         fr.deno = lc;
@@ -119,7 +119,7 @@ Fraction Fraction::operator-(const int& x){
                     fr.nume=this->nume;
                     frac.deno=1;
                     frac.nume=x;
-                    int lc = lcm(frac.deno,deno);
+                    int lc = frac.deno*deno;
                         int b = nume*frac.deno;
                         int y = frac.nume *deno;
                         fr.deno = lc;
@@ -153,7 +153,7 @@ Fraction Fraction::operator/(const int& frac){
                     
                     }
                     else{
-                        int lc = lcm(frac.deno,deno);
+                        int lc =frac.deno*deno;
                         fr.nume = nume*frac.deno;
                         fr2.nume = frac.nume *deno;
                         fr.deno = lc;
@@ -168,7 +168,7 @@ bool Fraction::operator<( Fraction &frac){
                         }
 
                         else{
-                            int lc = lcm(frac.deno,deno);
+                            int lc = frac.deno*deno;
                             fr.nume = nume*frac.deno;
                             fr2.nume = frac.nume *deno;
                             fr.deno = lc;
@@ -183,7 +183,7 @@ bool Fraction::operator<( Fraction &frac){
                         }
 
                         else{
-                            int lc = lcm(frac.deno,deno);
+                            int lc = frac.deno*deno;
                             fr.nume = nume*frac.deno;
                             fr2.nume = frac.nume *deno;
                             fr.deno = lc;
@@ -197,7 +197,7 @@ bool Fraction::operator>=( Fraction &frac){
                         }
 
                         else{
-                            int lc = lcm(frac.deno,deno);
+                            int lc =frac.deno*deno;
                             fr.nume = nume*frac.deno;
                             fr2.nume = frac.nume *deno;
                             fr.deno = lc;
@@ -212,7 +212,7 @@ bool Fraction::operator<=( Fraction &frac){
                         }
 
                         else{
-                            int lc = lcm(frac.deno,deno);
+                            int lc = frac.deno*deno;
                             fr.nume = nume*frac.deno;
                             fr2.nume = frac.nume *deno;
                             fr.deno = lc;
